@@ -1,0 +1,29 @@
+
+#spring:
+#  kafka:
+#    consumer:
+#      bootstrap-servers: 127.0.0.1:9092
+#      group-id: smb-group
+#      auto-offset-reset: earliest
+#      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+
+smband:
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
+    group-id: smb-group
+    auto-offset-reset: earliest
+  topics:
+    users-registrations: usersRegistrations
+    sms-send-data: sms-send-data
+    
+    
+app-scheduler:
+  pool-size: 10
+
+app-task-executor:
+  core-pool-size: 8
+  max-pool-size: 16
+  queue-capacity: 8192
+  thread-name-prefix: smb-thread-

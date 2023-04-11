@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smband.kafka.mapper.KafkaProcessMapper">
+	<!-- 
+		insertSmsHist	: SMS 이력 입력.
+	 -->
+	 
+	 <insert id="insertSmsHist">
+	 	/* kafkaProcess.sqlmap.xml: insertSmsHist 김영택, 2023.04.09 */
+	 	INSERT INTO SMS_HIST (
+	 		"from",
+	 		"to",
+	 		MESSAGE	
+	 	) VALUES (
+	 		#{from},
+	 		#{to},
+	 		#{message}
+	 	)
+	 </insert>
+	 
+</mapper>
